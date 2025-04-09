@@ -9,8 +9,10 @@ import './index.css';
 import App from './App';
 import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
-import ProfilePage from './pages/ProfilePage';
+import ResumePage from './pages/ResumePage';
 import AboutPage from './pages/AboutPage';
+import RepoList from './pages/RepoList';
+import ContactPage from './pages/ContactPage';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -24,13 +26,21 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'profile/:id',
-        element: <ProfilePage />,
+        path: 'projects',
+        element: <RepoList />,
       },
       {
         path: 'about',
         element: <AboutPage />,
       },
+      {
+        path: 'contact',
+        element: <ContactPage />,
+      },
+      {
+        path: 'resume',
+        element: <ResumePage />,
+      }
     ],
   },
 ]);
